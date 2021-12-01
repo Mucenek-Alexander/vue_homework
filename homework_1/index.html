@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>homework_1</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<section class="cats">
+    <div class="cat" v-for="elem in cats">
+        <h2>{{elem.name}}</h2>
+        <p><b>Возраст:</b>{{elem.age}}</p>
+        <p><b>Цвет:</b>{{elem.color}}</p>
+        <img :src="elem.img">
+        <a href="#">Подробнее</a>
+    </div>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>
