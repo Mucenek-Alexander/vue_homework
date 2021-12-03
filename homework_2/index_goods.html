@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Goods</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="css/style_goods.css">
+</head>
+<body>
+
+<!-- Дарья, подскажите пожалуйста, почему толком не работает переключение по сортировкам? -->
+<!-- Отображается всё корректно, но стоит прокликать все по 1 разу - создаётся ощущение, будто currentSortTitle -->
+<!-- из js не обоновялется и не хочет менять значение или...уже даже не представляю что не нравится ему :( -->
+
+    <sction class="goods">
+        <span class="sort"
+              v-for="title in sortTitle"
+              :class="{active: title === currentSortTitle}"
+              @click="currentSortTitle = title">{{ title }}</span>
+        <div class="item"
+             :class="obj.count === 0 ? 'zero' : obj.count < 20 ? 'not-many' : 'many'"
+             v-for="obj in sortClicked">
+            <h2>{{ obj.title }}</h2>
+            <span>Цена: {{ obj.price }}</span>
+        </div>
+    </sction>
+
+<script src="js/script.js"></script>
+</body>
+</html>

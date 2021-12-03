@@ -1,0 +1,35 @@
+.sort {
+    margin: 5px;
+    color: #64B5F6;
+}
+
+.item {
+    width: 125px;
+}
+
+.zero {
+    background-color: #E57373;
+}
+
+.not-many {
+    background-color: #FFB74D;
+}
+
+.many {
+    background-color: #AED581;
+}
+
+.sort:hover {
+    cursor: pointer;
+    border-bottom: 1px solid #64B5F6;
+}
+
+.active {
+    color: #000000;
+}
+
+.active:hover {
+    cursor: default;
+    border-bottom: transparent;
+}
+

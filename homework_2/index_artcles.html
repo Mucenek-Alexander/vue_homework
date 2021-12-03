@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Articles</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="css/style_articles.css">
+</head>
+<body>
+<section class="articles">
+    <div class="display-selector">
+        <span @click="selectorType = 'Отобразить сеткой'">Отобразить сеткой</span>
+        <span @click="selectorType = 'Отобразить списком'">Отобразить списком</span>
+    </div>
+    <div :class="selectorType === 'Отобразить сеткой' ? 'grid' : 'list'">
+        <article v-for="article in articles">
+            <img :src="article.image">
+            <h2>{{ article.title }}</h2>
+        </article>
+    </div>
+</section>
+
+
+<script src="js/script.js"></script>
+</body>
+</html>
