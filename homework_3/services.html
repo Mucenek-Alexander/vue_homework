@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>services</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="css/services.css">
+</head>
+<body>
+<section class="services">
+    <div class="services__list">
+        <h2>Выберите одну или несколько услуг:</h2>
+        <div class="service" v-for="service in services">
+            <h3>{{ service.title }}</h3>
+            <label>{{ service.price }}р.</label>
+            <input type="checkbox" id="service_check" :value="service" v-model="checked">
+        </div>
+    </div>
+    <span class="services__total-price">Итоговая цена: {{ priceTotal }}р.</span>
+</section>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+.services__list {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.service {
+    border: 1px solid black;
+}
+
+.service > h3 {
+    margin: 2px 0;
+}

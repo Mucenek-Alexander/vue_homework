@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>articles</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="css/articles.css">
+</head>
+<body>
+<div class="search">
+    <div class="search__form">
+        <form>
+            <input autofocus id="search-input" type="text" placeholder="Введите название статьи" v-model.trim="userInput">
+        </form>
+    </div>
+    <article class="search__result" v-for="article in filteredArticles">
+        <img :src="article.image">
+        <h2>{{ article.title }}</h2>
+    </article>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
